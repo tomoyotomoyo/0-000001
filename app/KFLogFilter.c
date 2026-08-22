@@ -11,6 +11,10 @@
 #include <time.h>
 #include <sys/sysctl.h>
 
+#ifndef KERN_MSGBUF
+#define KERN_MSGBUF 83
+#endif
+
 // Keywords we care about — maps to a tag and isRed flag
 static struct {
     const char *keyword;
